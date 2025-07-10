@@ -1120,7 +1120,7 @@ progress {
 
     .col-md-4 {
         flex: 0 0 auto;
-        width: 33.33333333%
+        width: 67%
     }
 
     .col-md-5 {
@@ -1168,7 +1168,7 @@ progress {
     }
 
     .offset-md-1 {
-        margin-left: 8.33333333%
+        /* margin-left: 8.33333333% */
     }
 
     .offset-md-2 {
