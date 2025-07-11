@@ -11,7 +11,8 @@
   <title>Siri Decor - About Page</title>
   <meta name="description" content="Siri Decor - About Page" />
   <meta name="keywords" content="Siri Decor - About Page" />
-  <link rel="shortcut icon" href="https://siridecor.com/img/favicon.png" />
+  <!-- <link rel="shortcut icon" href="https://siridecor.com/img/favicon.png" /> -->
+    <link rel="shortcut icon" href="../favicon.png">
   <link rel="stylesheet" href="./css2" />
   <link rel="stylesheet" href="./plugins.css" />
   <link rel="stylesheet" href="./style.css" />
@@ -99,7 +100,7 @@
     .enquiry-form {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        /* gap: 16px; */
     }
 
     .form-group {
@@ -183,6 +184,8 @@
 
     .fotter-left {
         width: 60%;
+        display: flex;
+        gap: 10rem;
     }
 
     /* Responsive Design */
@@ -1240,10 +1243,10 @@
                     class="fa-brands fa-instagram" style="color: #000;"></i></a>
               </div> -->
               <!-- <div class="dv"></div> -->
-              <a href="mailto:siridecor@gmail.com">vrishabhainteriors23@gmail.com</a>
+              <a href="mailto:virishabhainteriors@gmail.com">vrishabhainteriors23@gmail.com</a>
               <div class="dv"></div> <a href="tel:+918151075555">+(91) 9900543047</a>
               <div class="dv"></div> <a data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"
-                href="https://siridecor.com/#">Contact<i class="fa-solid fa-arrow-up fa-rotate-by"
+                href="">Contact<i class="fa-solid fa-arrow-up fa-rotate-by"
                   style="color: #fff; --fa-rotate-angle: 45deg;"></i></a>
             </div>
           </div>
@@ -1469,7 +1472,7 @@
                     height: 15px;
                     border-radius: 50%;
                     background: transparent;
-                    border: 1px solid #996e1b;
+                    border: 1px solid #F29C28;
                     transition: all 0.3s ease;
                 `;
 
@@ -1497,12 +1500,12 @@
           const span = dot.querySelector('span');
           if (index === currentIndex) {
             dot.classList.add('active');
-            span.style.background = '#996e1b';
-            span.style.border = '1px solid #996e1b';
+            span.style.background = '#F29C28';
+            span.style.border = '1px solid #F29C28';
           } else {
             dot.classList.remove('active');
             span.style.background = 'transparent';
-            span.style.border = '1px solid #996e1b';
+            span.style.border = '1px solid #F29C28';
           }
         });
       }
@@ -1676,7 +1679,7 @@
           } else if (this.type === 'email' && this.value && !isValidEmail(this.value)) {
               this.style.borderColor = '#e74c3c';
           } else {
-              this.style.borderColor = '#996e1b';
+              this.style.borderColor = '#F29C28';
           }
       });
   });
