@@ -48,263 +48,317 @@
 
   <style>
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     body {
-      font-family: "Outfit", sans-serif;
-      background: #101010;
-      color: #ffffff;
-      padding: 0;
+        font-family: "Outfit", sans-serif;
+        background: #101010;
+        color: #ffffff;
+        padding: 0;
     }
 
     .enquiry-section {
-      width: 40%;
-      max-width: none;
-      margin: 0;
+        width: 40%;
+        max-width: none;
+        margin: 0;
+    }
+
+    @media max-width(480px) {
+        .enquiry-section {
+            width: 100%;
+        }
     }
 
     .enquiry-header {
-      margin-bottom: 15px;
+        margin-bottom: 15px;
     }
 
     .enquiry-title {
-      font-family: "Oswald", sans-serif;
-      font-size: 21px;
-      font-weight: 300;
-      color: #fff;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      line-height: 1.2em;
+        font-family: "Oswald", sans-serif;
+        font-size: 21px;
+        font-weight: 300;
+        color: #fff;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        line-height: 1.2em;
     }
 
     .enquiry-description {
-      font-family: "Outfit", sans-serif;
-      font-size: 17px;
-      font-weight: 300;
-      line-height: 1.95em;
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 20px;
+        font-family: "Outfit", sans-serif;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 1.95em;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 20px;
     }
 
     .enquiry-form {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
     }
 
     .form-group {
-      position: relative;
+        position: relative;
     }
 
     .form-input {
-      width: 100%;
-      padding: 14px 16px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      border-radius: 8px;
-      color: #ffffff;
-      font-size: 14px;
-      transition: all 0.3s ease;
-      outline: none;
-      max-width: 100%;
-      margin-bottom: 15px;
-      padding: 18.5px 20px;
-      height: auto;
-      background-color: #1b1b1b;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      display: block;
-      width: 100%;
-      line-height: 1.5em;
-      font-family: "Outfit", sans-serif;
-      font-size: 17px;
-      font-weight: 300;
-      color: #999;
-      background-image: none;
-      border: none;
-      border-radius: 30px;
+        width: 100%;
+        padding: 14px 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 8px;
+        color: #ffffff;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        outline: none;
+        max-width: 100%;
+        margin-bottom: 15px;
+        padding: 18.5px 20px;
+        height: auto;
+        background-color: #1b1b1b;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        display: block;
+        width: 100%;
+        line-height: 1.5em;
+        font-family: "Outfit", sans-serif;
+        font-size: 17px;
+        font-weight: 300;
+        color: #999;
+        background-image: none;
+        border: none;
+        border-radius: 30px;
     }
 
     .form-input:focus {
-      border-color: #d4af37;
-      background: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        border-color: #d4af37;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
     }
 
     .form-input::placeholder {
-      color: #888;
-      font-size: 14px;
+        color: #888;
+        font-size: 14px;
     }
 
     .form-textarea {
-      min-height: 100px;
-      resize: vertical;
-      font-family: inherit;
+        min-height: 100px;
+        resize: vertical;
+        font-family: inherit;
     }
 
     .submit-btn {
-      background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
-      color: #1a1a1a;
-      border: none;
-      padding: 14px 24px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
+        background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+        color: #1a1a1a;
+        border: none;
+        padding: 14px 24px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
     }
 
     .submit-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
     }
 
     .submit-btn:active {
-      transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    .footer-flex {
+        display: flex;
+    }
+
+    .fotter-left {
+        width: 60%;
     }
 
     /* Responsive Design */
     @media (max-width: 768px) {
-      .enquiry-section {
-        max-width: 100%;
-        padding: 0 10px;
-      }
+        .enquiry-section {
+            max-width: 100%;
+            padding: 0 10px;
+        }
 
-      .enquiry-title {
-        font-size: 16px;
-      }
+        .enquiry-title {
+            font-size: 16px;
+        }
 
-      .enquiry-description {
-        font-size: 13px;
-      }
+        .enquiry-description {
+            font-size: 13px;
+        }
 
-      .form-input {
-        padding: 12px 14px;
-        font-size: 13px;
-      }
+        .form-input {
+            padding: 12px 14px;
+            font-size: 13px;
+        }
 
-      .submit-btn {
-        padding: 12px 20px;
-        font-size: 13px;
-      }
+        .submit-btn {
+            padding: 12px 20px;
+            font-size: 13px;
+        }
+
+        .footer-flex {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fotter-left {
+            width: 100%;
+        }
+
+        .enquiry-section {
+            width: 100%;
+            max-width: none;
+            margin: 0;
+        }
     }
 
     @media (max-width: 480px) {
-      body {
-        padding: 15px;
-      }
+        body {
+            padding: 15px;
+        }
 
-      .enquiry-form {
-        gap: 14px;
-      }
+        .enquiry-form {
+            gap: 14px;
+        }
 
-      .form-input {
-        padding: 11px 12px;
-      }
+        .form-input {
+            padding: 11px 12px;
+        }
 
-      .submit-btn {
-        padding: 11px 18px;
-      }
+        .submit-btn {
+            padding: 11px 18px;
+        }
+
+        .row {
+            max-width: 400px;
+        }
+
+        .footer-flex {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fotter-left {
+            width: 100%;
+        }
+
+        .enquiry-section {
+            width: 100%;
+            max-width: none;
+            margin: 0;
+        }
     }
 
     @media (max-width: 320px) {
-      .enquiry-title {
-        font-size: 14px;
-        letter-spacing: 1px;
-      }
+        .enquiry-title {
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
 
-      .enquiry-description {
-        font-size: 12px;
-      }
+        .enquiry-description {
+            font-size: 12px;
+        }
 
-      .form-input {
-        padding: 10px;
-        font-size: 12px;
-      }
+        .form-input {
+            padding: 10px;
+            font-size: 12px;
+        }
 
-      .submit-btn {
-        padding: 10px 16px;
-        font-size: 12px;
-      }
+        .submit-btn {
+            padding: 10px 16px;
+            font-size: 12px;
+        }
+
+        .footer-flex {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fotter-left {
+            width: 100%;
+        }
+
+        .enquiry-section {
+            width: 100%;
+            max-width: none;
+            margin: 0;
+        }
     }
 
     /* Loading state for submit button */
     .submit-btn.loading {
-      opacity: 0.7;
-      cursor: not-allowed;
+        opacity: 0.7;
+        cursor: not-allowed;
     }
 
     .submit-btn.loading::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 20px;
-      height: 20px;
-      margin: -10px 0 0 -10px;
-      border: 2px solid #1a1a1a;
-      border-top: 2px solid transparent;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        margin: -10px 0 0 -10px;
+        border: 2px solid #1a1a1a;
+        border-top: 2px solid transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
     }
 
     @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
+        0% {
+            transform: rotate(0deg);
+        }
 
-      100% {
-        transform: rotate(360deg);
-      }
+        100% {
+            transform: rotate(360deg);
+        }
     }
 
     /* Success message */
     .success-message {
-      background: rgba(46, 204, 113, 0.1);
-      border: 1px solid rgba(46, 204, 113, 0.3);
-      color: #2ecc71;
-      padding: 12px 16px;
-      border-radius: 8px;
-      font-size: 14px;
-      text-align: center;
-      margin-top: 16px;
-      display: none;
+        background: rgba(46, 204, 113, 0.1);
+        border: 1px solid rgba(46, 204, 113, 0.3);
+        color: #2ecc71;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 16px;
+        display: none;
     }
 
     .success-message.show {
-      display: block;
-      animation: fadeIn 0.5s ease;
+        display: block;
+        animation: fadeIn 0.5s ease;
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
-
-    .footer-flex {
-      display: flex;
-    }
-
-    .fotter-left {
-      width: 60%;
-    }
-  </style>
-
+</style>
 </head>
 
 <body cz-shortcut-listen="true">
@@ -344,10 +398,10 @@
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="../index.html">Home</a>
+            <a class="nav-link " href="../index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./about.html">About</a>
+            <a class="nav-link active" href="./about.html">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../service_files/service.html">Services</a>

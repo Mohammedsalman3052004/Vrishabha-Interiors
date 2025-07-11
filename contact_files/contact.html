@@ -44,6 +44,12 @@
                 margin: 0;
             }
     
+            @media max-width(480px) {
+                .enquiry-section {
+                    width: 100%;
+                }
+            }
+    
             .enquiry-header {
                 margin-bottom: 15px;
             }
@@ -149,6 +155,14 @@
                 transform: translateY(0);
             }
     
+            .footer-flex {
+                display: flex;
+            }
+    
+            .fotter-left {
+                width: 60%;
+            }
+    
             /* Responsive Design */
             @media (max-width: 768px) {
                 .enquiry-section {
@@ -173,6 +187,21 @@
                     padding: 12px 20px;
                     font-size: 13px;
                 }
+    
+                .footer-flex {
+                    display: flex;
+                    flex-direction: column;
+                }
+    
+                .fotter-left {
+                    width: 100%;
+                }
+    
+                .enquiry-section {
+                    width: 100%;
+                    max-width: none;
+                    margin: 0;
+                }
             }
     
             @media (max-width: 480px) {
@@ -190,6 +219,25 @@
     
                 .submit-btn {
                     padding: 11px 18px;
+                }
+    
+                .row {
+                    max-width: 400px;
+                }
+    
+                .footer-flex {
+                    display: flex;
+                    flex-direction: column;
+                }
+    
+                .fotter-left {
+                    width: 100%;
+                }
+    
+                .enquiry-section {
+                    width: 100%;
+                    max-width: none;
+                    margin: 0;
                 }
             }
     
@@ -211,6 +259,21 @@
                 .submit-btn {
                     padding: 10px 16px;
                     font-size: 12px;
+                }
+    
+                .footer-flex {
+                    display: flex;
+                    flex-direction: column;
+                }
+    
+                .fotter-left {
+                    width: 100%;
+                }
+    
+                .enquiry-section {
+                    width: 100%;
+                    max-width: none;
+                    margin: 0;
                 }
             }
     
@@ -273,13 +336,6 @@
                     transform: translateY(0);
                 }
             }
-    
-            .footer-flex{
-                display: flex;
-            }
-            .fotter-left{
-                width: 60%;
-            }
         </style>
 </head>
 
@@ -314,10 +370,10 @@
             <!-- Menu -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link " href="../index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="../about_files/about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="../service_files/service.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
