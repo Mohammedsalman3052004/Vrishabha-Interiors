@@ -331,7 +331,7 @@
       <!-- Logo -->
       <div class="logo-wrapper">
         <a class="logo" href="../index.html">
-          <img src="./logo.png" class="logo-img" alt="" />
+          <img src="../logo.webp" class="logo-img" alt="" />
         </a>
         <!--<a class="logo" href="index.html"><div class="logo"><img src="img/logo.png" alt=""></div></a> -->
       </div>
@@ -360,8 +360,8 @@
     </div>
   </nav>
   <!-- Header Banner -->
-  <section class="banner-header section-padding bg-img" data-overlay-dark="5" data-background="./1.jpg"
-    style="background-image: url('./1.jpg')">
+  <section class="banner-header section-padding bg-img" data-overlay-dark="5" data-background="../background.webp"
+    style="background-image: url('../background.webp')">
     <div class="v-middle">
       <div class="container">
         <div class="row">
@@ -396,7 +396,7 @@
         </div>
         <div class="col-lg-6 offset-lg-1 col-md-12 mt-30">
           <div class="item">
-            <img src="./about-us.jpg" class="img-fluid" alt="" />
+            <img src="../images/about.webp" class="img-fluid" alt="" />
           </div>
         </div>
         <div class="col-md-12">
@@ -1166,7 +1166,7 @@
   <!-- Lets Talk -->
   <section class="lets-talk">
     <div class="background bg-img bg-fixed section-padding" data-overlay-dark="5" data-background="./contact-us-bg.jpg"
-      style="background-image: url('./contact-us-bg.jpg')">
+      style="background-image: url('../about\ banner.webp')">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -1206,7 +1206,7 @@
                 <div class="fotter-left">
                     <div class="col-md-4 mb-30">
                         <div class="item">
-                            <div class="logo"><img src="./logo.png" alt=""></div>
+                            <div class="logo"><img src="../logo.webp" alt="" style="margin-bottom: 2rem;"></div>
                             <p>Experience exquisitely crafted spaces that echo your style and elevate everyday
                                 living
                                 into a refined lifestyle.</p>
@@ -1573,6 +1573,74 @@
       initCustomSwiper('.testimonials .owl-carousel'); // Testimonials swiper
     });
   </script>
+
+<script>
+  document.getElementById('enquiryForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const submitBtn = document.getElementById('submitBtn');
+      const successMessage = document.getElementById('successMessage');
+
+      // Add loading state
+      submitBtn.classList.add('loading');
+      submitBtn.textContent = '';
+
+      // Simulate form submission
+      setTimeout(() => {
+          // Reset button
+          submitBtn.classList.remove('loading');
+          submitBtn.textContent = 'Send Enquiry';
+
+          // Show success message
+          successMessage.classList.add('show');
+
+          // Reset form
+          this.reset();
+
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+              successMessage.classList.remove('show');
+          }, 5000);
+      }, 2000);
+  });
+
+  // Phone number formatting
+  document.getElementById('phone').addEventListener('input', function (e) {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length > 10) {
+          value = value.slice(0, 10);
+      }
+      e.target.value = value;
+  });
+
+  // Real-time validation
+  const inputs = document.querySelectorAll('.form-input');
+  inputs.forEach(input => {
+      input.addEventListener('blur', function () {
+          if (this.hasAttribute('required') && !this.value.trim()) {
+              this.style.borderColor = '#e74c3c';
+          } else if (this.type === 'email' && this.value && !isValidEmail(this.value)) {
+              this.style.borderColor = '#e74c3c';
+          } else {
+              this.style.borderColor = '#996e1b';
+          }
+      });
+  });
+
+  function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+</script>
+<script>
+  window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 100) {
+          navbar.classList.add('nav-scroll');
+      } else {
+          navbar.classList.remove('nav-scroll');
+      }
+  });
+</script>
 
 
 </body>
