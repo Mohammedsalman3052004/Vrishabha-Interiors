@@ -167,7 +167,7 @@ textarea {
     max-width: 100%;
     margin-bottom: 15px;
     padding: 18.5px 20px;
-    height: auto;
+    height: 50px;
     background-color: #1b1b1b;
     -webkit-box-shadow: none;
     box-shadow: none;
