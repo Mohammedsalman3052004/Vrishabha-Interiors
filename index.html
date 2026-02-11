@@ -19,8 +19,8 @@
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
     <title>Vrishabha Interiors</title>
-    <meta name="description" content="Siri Decor - Home Page" />
-    <meta name="keywords" content="Siri Decor - Home Page" />
+    <meta name="description" content="Vrishabha Interiors - Home Page" />
+    <meta name="keywords" content="Vrishabha Interiors - Home Page" />
     <!-- <link rel="shortcut icon" href="https://siridecor.com/img/favicon.png"> -->
     <link rel="shortcut icon" href="./favicon.png" />
     <link rel="stylesheet" href="./css2" />
@@ -399,6 +399,364 @@
         height: 225px;
       } */
       
+      .projects-showcase-wrapper {
+                min-height: 100vh;
+                background-color: #000000;
+                color: #ffffff;
+                padding: 80px 24px;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            }
+
+            .projects-showcase-container {
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+
+            /* Header Section */
+            .projects-showcase-header {
+                text-align: center;
+                margin-bottom: 48px;
+            }
+
+            .projects-showcase-subtitle {
+                color: #F29C28;
+                font-size: 12px;
+                letter-spacing: 0.3em;
+                margin-bottom: 16px;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+
+            .projects-showcase-title {
+                font-size: clamp(2.5rem, 5vw, 4rem);
+                font-weight: 300;
+                margin-bottom: 48px;
+                letter-spacing: 0.02em;
+            }
+
+            /* Tab Buttons */
+            .projects-showcase-tab-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 16px;
+                margin-bottom: 64px;
+                flex-wrap: wrap;
+            }
+
+            .projects-showcase-tab-btn {
+                padding: 12px 32px;
+                border-radius: 50px;
+                border: 2px solid #F29C28;
+                background: transparent;
+                color: #F29C28;
+                font-size: 16px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                outline: none;
+                font-family: inherit;
+            }
+
+            .projects-showcase-tab-btn:hover {
+                background-color: rgba(255, 140, 66, 0.1);
+                transform: translateY(-2px);
+            }
+
+            .projects-showcase-tab-btn.projects-showcase-active {
+                background-color: #F29C28;
+                color: #ffffff;
+            }
+
+            /* Slider Section */
+            .projects-showcase-slider-wrapper {
+                position: relative;
+                padding: 0 80px;
+            }
+
+            .projects-showcase-slider-container {
+                overflow: hidden;
+                border-radius: 8px;
+            }
+
+            .projects-showcase-slider-track {
+                display: flex;
+                transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .projects-showcase-slider-slide {
+                min-width: 100%;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 24px;
+            }
+
+            /* Project Card */
+            .projects-showcase-card {
+                position: relative;
+                aspect-ratio: 3 / 4;
+                border-radius: 12px;
+                overflow: hidden;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+                /* width: 360px;
+                height: 450px; */
+            }
+
+            .projects-showcase-card:hover {
+                transform: translateY(-8px);
+            }
+
+            .projects-showcase-card-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+
+            .projects-showcase-card:hover .projects-showcase-card-image {
+                transform: scale(1.1);
+            }
+
+            .projects-showcase-card-overlay {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+            }
+
+            .projects-showcase-card-content {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 24px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                z-index: 2;
+            }
+
+            .projects-showcase-card-info h3 {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 4px;
+                letter-spacing: 0.02em;
+            }
+
+            .projects-showcase-card-info p {
+                color: #d1d5db;
+                font-size: 14px;
+            }
+
+            .projects-showcase-card-arrow {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background-color: #F29C28;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                flex-shrink: 0;
+            }
+
+            .projects-showcase-card:hover .projects-showcase-card-arrow {
+                transform: scale(1.1);
+                background-color: rgba(255, 157, 92, 0.742);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .projects-showcase-card-arrow svg {
+                width: 20px;
+                height: 20px;
+                stroke: white;
+                stroke-width: 2;
+            }
+
+            /* Navigation Arrows */
+            .projects-showcase-nav-arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background-color: #F29C28;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                z-index: 10;
+                outline: none;
+            }
+
+            .projects-showcase-nav-arrow:hover {
+                background-color: #ff9d5c;
+                transform: translateY(-50%) scale(1.1);
+            }
+
+            .projects-showcase-nav-arrow.projects-showcase-prev {
+                left: 0;
+            }
+
+            .projects-showcase-nav-arrow.projects-showcase-next {
+                right: 0;
+            }
+
+            .projects-showcase-nav-arrow svg {
+                width: 24px;
+                height: 24px;
+                stroke: white;
+                stroke-width: 2;
+            }
+
+            /* Dots Navigation */
+            .projects-showcase-dots {
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+                margin-top: 48px;
+            }
+
+            .projects-showcase-dot {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                border: 2px solid #F29C28;
+                background: transparent;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                padding: 0;
+                outline: none;
+            }
+
+            .projects-showcase-dot:hover {
+                background-color: rgba(255, 140, 66, 0.3);
+            }
+
+            .projects-showcase-dot.projects-showcase-dot-active {
+                background-color: #F29C28;
+            }
+            .section-subtitle {
+                font-family: "Oswald", sans-serif;
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 15px;
+                color: #F29C28;
+                margin-bottom: 15px;
+                position: relative;
+                display: inline-block;
+                z-index: 1;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+            }
+
+            .section-subtitle.white {
+                color: #fff;
+            }
+
+
+            .section-title {
+                font-size: 50px;
+                font-family: "Oswald", sans-serif;
+                color: #fff;
+                position: relative;
+                margin-bottom: 15px;
+                line-height: 1.2em;
+                font-weight: 300;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+
+            [data-overlay-dark] .section-title span,
+            .section-title span {
+                color: #F29C28;
+                background: #F29C28;
+                background: linear-gradient(to right, #F29C28 30%, #C7B865 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+            }
+
+            .section-title.white {
+                color: #fff;
+            }
+
+            .section-title.black {
+                color: #fff;
+            }
+
+
+            /* Responsive Design */
+            @media(max-width: 1200px) {
+                .projects-showcase-slider-wrapper {
+                    padding: 0 60px;
+                }
+
+                .projects-showcase-slider-slide {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            @media(max-width: 768px) {
+                .projects-showcase-wrapper {
+                    padding: 60px 16px;
+                }
+
+                .projects-showcase-slider-wrapper {
+                    padding: 0 50px;
+                }
+
+                .projects-showcase-slider-slide {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 16px;
+                }
+
+                .projects-showcase-tab-buttons {
+                    gap: 12px;
+                }
+
+                .projects-showcase-tab-btn {
+                    padding: 10px 24px;
+                    font-size: 14px;
+                }
+
+                .projects-showcase-nav-arrow {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .projects-showcase-card-content {
+                    padding: 16px;
+                }
+
+                .projects-showcase-card-info h3 {
+                    font-size: 16px;
+                }
+
+                .projects-showcase-card-arrow {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            @media(max-width: 480px) {
+                .projects-showcase-slider-wrapper {
+                    padding: 0 40px;
+                }
+
+                .projects-showcase-slider-slide {
+                    grid-template-columns: 1fr;
+                }
+
+                .projects-showcase-nav-arrow {
+                    width: 36px;
+                    height: 36px;
+                }
+            }
     </style>
   </head>
 
@@ -503,7 +861,7 @@
                           meets comfort—crafted to reflect your taste and enrich
                           every moment at home.
                         </p>
-                        <a href="" class="button-1"
+                        <a href="./about/" class="button-1"
                           >Explore More <span class="ti-arrow-top-right"></span
                         ></a>
                       </div>
@@ -529,7 +887,7 @@
                           meets comfort—crafted to reflect your taste and enrich
                           every moment at home.
                         </p>
-                        <a href="" class="button-1"
+                        <a href="./about/" class="button-1"
                           >Explore More <span class="ti-arrow-top-right"></span
                         ></a>
                       </div>
@@ -555,7 +913,7 @@
                           meets comfort—crafted to reflect your taste and enrich
                           every moment at home.
                         </p>
-                        <a href="" class="button-1"
+                        <a href="./about/" class="button-1"
                           >Explore More <span class="ti-arrow-top-right"></span
                         ></a>
                       </div>
@@ -581,7 +939,7 @@
                           meets comfort—crafted to reflect your taste and enrich
                           every moment at home.
                         </p>
-                        <a href="" class="button-1"
+                        <a href="./about/" class="button-1"
                           >Explore More <span class="ti-arrow-top-right"></span
                         ></a>
                       </div>
@@ -607,7 +965,7 @@
                           meets comfort—crafted to reflect your taste and enrich
                           every moment at home.
                         </p>
-                        <a href="" class="button-1"
+                        <a href="./about/" class="button-1"
                           >Explore More <span class="ti-arrow-top-right"></span
                         ></a>
                       </div>
@@ -719,7 +1077,7 @@
                         </p>
                       </div>
                       <div class="icon">
-                        <a href="" class="arrow">
+                        <a href="./service/" class="arrow">
                           <div class="icon-w">
                             <i
                               class="fa-solid fa-arrow-up fa-rotate-by"
@@ -744,7 +1102,7 @@
                         </p>
                       </div>
                       <div class="icon">
-                        <a href="" class="arrow">
+                        <a href="./service/" class="arrow">
                           <div class="icon-w">
                             <i
                               class="fa-solid fa-arrow-up fa-rotate-by"
@@ -769,7 +1127,7 @@
                         </p>
                       </div>
                       <div class="icon">
-                        <a href="" class="arrow">
+                        <a href="./service/" class="arrow">
                           <div class="icon-w">
                             <i
                               class="fa-solid fa-arrow-up fa-rotate-by"
@@ -794,7 +1152,7 @@
                         </p>
                       </div>
                       <div class="icon">
-                        <a href="" class="arrow">
+                        <a href="./service/" class="arrow">
                           <div class="icon-w">
                             <i
                               class="fa-solid fa-arrow-up fa-rotate-by"
@@ -819,7 +1177,7 @@
                         </p>
                       </div>
                       <div class="icon">
-                        <a href="" class="arrow">
+                        <a href="./service/" class="arrow">
                           <div class="icon-w">
                             <i
                               class="fa-solid fa-arrow-up fa-rotate-by"
@@ -844,7 +1202,7 @@
                         </p>
                       </div>
                       <div class="icon">
-                        <a href="" class="arrow">
+                        <a href="./service/" class="arrow">
                           <div class="icon-w">
                             <i
                               class="fa-solid fa-arrow-up fa-rotate-by"
@@ -870,7 +1228,7 @@
                         </p>
                       </div>
                       <div class="icon">
-                        <a href="" class="arrow">
+                        <a href="./service/" class="arrow">
                           <div class="icon-w">
                             <i
                               class="fa-solid fa-arrow-up fa-rotate-by"
@@ -895,7 +1253,7 @@
                         </p>
                       </div>
                       <div class="icon">
-                        <a href="" class="arrow">
+                        <a href="./service/" class="arrow">
                           <div class="icon-w">
                             <i
                               class="fa-solid fa-arrow-up fa-rotate-by"
@@ -924,12 +1282,17 @@
     </section>
     <div class="line-vr-section"></div>
     <!-- Portfolio -->
-    <section class="portfolio section-padding">
+
+
+
+    <!-- <section class="portfolio section-padding">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center mb-20">
             <div class="section-subtitle">Projects</div>
             <div class="section-title white">Our Works</div>
+
+            
           </div>
         </div>
         <div class="owl-theme owl-carousel owl-loaded owl-drag">
@@ -1077,118 +1440,6 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="owl-item active" style="width: 358.667px; margin-right: 20px;">
-                            <div class="item">
-                                <div class="img"> <img src="./images/gallery6.webp" alt=""> </div>
-                                <div class="bottom-fade"></div>
-                                <div class="con active">
-                                    <div class="title">
-                                        <h4>GR Sitara</h4>
-                                        <h6><span class="ti-location-pin"></span> Off Soukya Road</h6>
-                                    </div>
-                                    <div class="icon">
-                                        <a href="" class="arrow"><i class="fa-solid fa-arrow-up fa-rotate-by"
-                                                style="color: #fff; --fa-rotate-angle: 45deg;"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-              <!-- <div class="owl-item active" style="width: 358.667px; margin-right: 20px;">
-                            <div class="item">
-                                <div class="img"> <img src="./project-3.jpg" alt=""> </div>
-                                <div class="bottom-fade"></div>
-                                <div class="con active">
-                                    <div class="title">
-                                        <h4>Sowparnika Unnathi</h4>
-                                        <h6><span class="ti-location-pin"></span> Attibele</h6>
-                                    </div>
-                                    <div class="icon">
-                                        <a href="" class="arrow"> <i class="fa-solid fa-arrow-up fa-rotate-by"
-                                                style="color: #fff; --fa-rotate-angle: 45deg;"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="owl-item" style="width: 358.667px; margin-right: 20px;">
-                            <div class="item">
-                                <div class="img"> <img src="./project-4.jpg" alt=""> </div>
-                                <div class="bottom-fade"></div>
-                                <div class="con active">
-                                    <div class="title">
-                                        <h4>Sobha Dream Acres</h4>
-                                        <h6><span class="ti-location-pin"></span> Panathur</h6>
-                                    </div>
-                                    <div class="icon">
-                                        <a href="" class="arrow"> <i class="fa-solid fa-arrow-up fa-rotate-by"
-                                                style="color: #fff; --fa-rotate-angle: 45deg;"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="owl-item" style="width: 358.667px; margin-right: 20px;">
-                            <div class="item">
-                                <div class="img"> <img src="./project-5.jpg" alt=""> </div>
-                                <div class="bottom-fade"></div>
-                                <div class="con active">
-                                    <div class="title">
-                                        <h4>Prestige White Meadows</h4>
-                                        <h6><span class="ti-location-pin"></span> Whitefield</h6>
-                                    </div>
-                                    <div class="icon">
-                                        <a href="" class="arrow"> <i class="fa-solid fa-arrow-up fa-rotate-by"
-                                                style="color: #fff; --fa-rotate-angle: 45deg;"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="owl-item cloned" style="width: 358.667px; margin-right: 20px;">
-                            <div class="item">
-                                <div class="img"> <img src="./project-1.jpg" alt=""> </div>
-                                <div class="bottom-fade"></div>
-                                <div class="con active">
-                                    <div class="title">
-                                        <h4>Sowparnika Pragati</h4>
-                                        <h6><span class="ti-location-pin"></span> Off Sarjapur Road</h6>
-                                    </div>
-                                    <div class="icon">
-                                        <a href="" class="arrow"> <i class="fa-solid fa-arrow-up fa-rotate-by"
-                                                style="color: #fff; --fa-rotate-angle: 45deg;"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="owl-item cloned" style="width: 358.667px; margin-right: 20px;">
-                            <div class="item">
-                                <div class="img"> <img src="./project-2.jpg" alt=""> </div>
-                                <div class="bottom-fade"></div>
-                                <div class="con active">
-                                    <div class="title">
-                                        <h4>Sowparnika Indraprastha</h4>
-                                        <h6><span class="ti-location-pin"></span> Off Soukya Road</h6>
-                                    </div>
-                                    <div class="icon">
-                                        <a href="" class="arrow"> <i class="fa-solid fa-arrow-up fa-rotate-by"
-                                                style="color: #fff; --fa-rotate-angle: 45deg;"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="owl-item cloned" style="width: 358.667px; margin-right: 20px;">
-                            <div class="item">
-                                <div class="img"> <img src="./project-3.jpg" alt=""> </div>
-                                <div class="bottom-fade"></div>
-                                <div class="con active">
-                                    <div class="title">
-                                        <h4>Sowparnika Unnathi</h4>
-                                        <h6><span class="ti-location-pin"></span> Attibele</h6>
-                                    </div>
-                                    <div class="icon">
-                                        <a href="" class="arrow"> <i class="fa-solid fa-arrow-up fa-rotate-by"
-                                                style="color: #fff; --fa-rotate-angle: 45deg;"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
             </div>
           </div>
           <div class="owl-nav disabled">
@@ -1198,11 +1449,82 @@
               <span class="lnr ti-angle-right"></span>
             </button>
           </div>
-          <!-- <div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button
-                        role="button" class="owl-dot"><span></span></button></div> -->
         </div>
       </div>
-    </section>
+    </section> -->
+
+
+
+
+
+
+        <div class="projects-showcase-wrapper">
+            <div
+                class="projects-showcase-container">
+                <!-- Header -->
+                <div class="projects-showcase-header">
+                    <!-- <p class="projects-showcase-subtitle">PROJECTS</p> -->
+                    <!-- <h1 class="projects-showcase-title">OUR WORKS</h1> --><div class="section-subtitle"> Projects</div>
+                    <div class="section-title white">Our Works</div>
+
+                    <!-- Tab Buttons -->
+                    <div class="projects-showcase-tab-buttons">
+                        <button class="projects-showcase-tab-btn projects-showcase-active" data-tab="completed">
+                            COMPLETED PROJECTS
+                        </button>
+                        <button class="projects-showcase-tab-btn" data-tab="upcoming">
+                            ONGOING PROJECTS
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Slider -->
+                <div
+                    class="projects-showcase-slider-wrapper">
+                    <!-- Navigation Arrows -->
+                    <button class="projects-showcase-nav-arrow projects-showcase-prev" aria-label="Previous slide">
+                        <svg fill="none" viewbox="0 0 24 24">
+                            <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <button class="projects-showcase-nav-arrow projects-showcase-next" aria-label="Next slide">
+                        <svg fill="none" viewbox="0 0 24 24">
+                            <path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <!-- Slider Container -->
+                    <div class="projects-showcase-slider-container">
+                        <div
+                            class="projects-showcase-slider-track" id="projectsShowcaseSliderTrack"><!-- Slides will be generated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dots Navigation -->
+                <div
+                    class="projects-showcase-dots" id="projectsShowcaseDots"><!-- Dots will be generated by JavaScript -->
+                </div>
+            </div>
+
+
+
+
+
+
+            
+        </div>
+
+
+
+
+
+
+
+
+
+
     <!-- divider line -->
     <div class="line-vr-section d-none"></div>
     <!-- Services -->
@@ -2566,7 +2888,7 @@
           <div class="row">
             <div class="col-md-12">
               <p class="mb-0" style="text-align: center">
-                © Vrishabha Interiors 2025. All rights reserved. Digital Partner
+                © Vrishabha Interiors 2026. All rights reserved. Digital Partner
                 <a target="_blank" href="https://www.pinakkaa.com">PINAKKAA.</a>
               </p>
             </div>
@@ -2677,6 +2999,350 @@
           }
         });
         </script> -->
+
+
+
+        
+        <script>
+          // Projects Showcase Manager - Unique namespace to avoid conflicts
+          const ProjectsShowcaseManager = (function () { // Data
+              const projectsShowcaseData = {
+                  completed: [
+                      {
+                          id: 1,
+                          title: 'GRC BRUNDAVAN',
+                          location: 'Off Sarjapur Road',
+                          image: './HD Images/DSC06743.jpg'
+                      },
+                      {
+                          id: 2,
+                          title: '⁠GR SANKALPA',
+                          location: 'Off Sarjapur Road',
+                          image: './HD Images/DSC06744.jpg'
+                      },
+                      {
+                          id: 3,
+                          title: 'GRC SUBHIKSHA',
+                          location: 'Off Sarjapur Road',
+                          image: './HD Images/DSC06747.jpg'
+                      },
+                      {
+                          id: 4,
+                          title: 'GR SHRUSHTI',
+                          location: 'Off Soukya Road',
+                          image: './HD Images/DSC06758.jpg'
+                      }, {
+                          id: 5,
+                          title: '⁠GR ONE AND ONLY',
+                          location: 'Whitefield',
+                          image: './HD Images/DSC06784.jpg'
+                      }, {
+                          id: 6,
+                          title: '⁠GR SAGAR NIVAS',
+                          location: 'Electronic City',
+                          image: './HD Images/DSC06774.jpg'
+                      },
+                      {
+                          id: 1,
+                          title: 'GRC BRUNDAVAN',
+                          location: 'Off Sarjapur Road',
+                          image: './HD Images/DSC06743.jpg'
+                      },
+                      {
+                          id: 2,
+                          title: '⁠GR SANKALPA',
+                          location: 'Off Sarjapur Road',
+                          image: './HD Images/DSC06744.jpg'
+                      },
+                      {
+                          id: 3,
+                          title: 'GRC SUBHIKSHA',
+                          location: 'Off Sarjapur Road',
+                          image: './HD Images/DSC06747.jpg'
+                      },
+                      {
+                          id: 4,
+                          title: 'GR SHRUSHTI',
+                          location: 'Off Soukya Road',
+                          image: './HD Images/DSC06758.jpg'
+                      }, {
+                          id: 5,
+                          title: '⁠GR ONE AND ONLY',
+                          location: 'Whitefield',
+                          image: './HD Images/DSC06784.jpg'
+                      }, {
+                          id: 6,
+                          title: '⁠GR SAGAR NIVAS',
+                          location: 'Electronic City',
+                          image: './HD Images/DSC06774.jpg'
+                      },
+                  ],
+                  upcoming: [
+                      {
+                          id: 1,
+                          title: 'GR SHREEKRISH',
+                          location: 'Off Whitefield Road',
+                          image: './HD Images/DSC06228.jpg'
+                      },
+                      {
+                          id: 2,
+                          title: 'GR SITARA',
+                          location: 'Electronic City',
+                          image: './HD Images/DSC06245.jpg'
+                      },
+                      {
+                          id: 3,
+                          title: 'GR SAMSKRUTHI',
+                          location: 'Marathahalli',
+                          image: './HD Images/DSC06260.jpg'
+                      },
+                      {
+                          id: 4,
+                          title: 'SRIVARA VASUDHA',
+                          location: 'Koramangala',
+                          image: './HD Images/DSC06269.jpg'
+                      }, {
+                          id: 5,
+                          title: 'GRC SARFON SKY',
+                          location: 'Bannerghatta Road',
+                          image: './HD Images/DSC06292.jpg'
+                      },
+                      {
+                          id: 1,
+                          title: 'GR SHREEKRISH',
+                          location: 'Off Whitefield Road',
+                          image: './HD Images/DSC06228.jpg'
+                      },
+                      {
+                          id: 2,
+                          title: 'GR SITARA',
+                          location: 'Electronic City',
+                          image: './HD Images/DSC06245.jpg'
+                      },
+                      {
+                          id: 3,
+                          title: 'GR SAMSKRUTHI',
+                          location: 'Marathahalli',
+                          image: './HD Images/DSC06260.jpg'
+                      },
+                      {
+                          id: 4,
+                          title: 'SRIVARA VASUDHA',
+                          location: 'Koramangala',
+                          image: './HD Images/DSC06269.jpg'
+                      }, {
+                          id: 5,
+                          title: 'GRC SARFON SKY',
+                          location: 'Bannerghatta Road',
+                          image: './HD Images/DSC06292.jpg'
+                      },
+                  ]
+              };
+
+              // State
+              let projectsShowcaseCurrentTab = 'completed';
+              let projectsShowcaseCurrentSlideIndex = 0;
+              let projectsShowcaseItemsPerSlide = 4;
+
+              // DOM Elements
+              const projectsShowcaseSliderTrack = document.getElementById('projectsShowcaseSliderTrack');
+              const projectsShowcaseDotsContainer = document.getElementById('projectsShowcaseDots');
+              const projectsShowcaseTabButtons = document.querySelectorAll('.projects-showcase-tab-btn');
+              const projectsShowcasePrevButton = document.querySelector('.projects-showcase-prev');
+              const projectsShowcaseNextButton = document.querySelector('.projects-showcase-next');
+
+              // Utility Functions
+              function projectsShowcaseGetItemsPerSlide() {
+                  const windowWidth = window.innerWidth;
+                  if (windowWidth <= 480) 
+                      return 1;
+                  
+                  if (windowWidth <= 768) 
+                      return 2;
+                  
+                  if (windowWidth <= 1200) 
+                      return 3;
+                  
+                  return 4;
+              }
+
+              function projectsShowcaseCreateCard(project) {
+                  return `
+                  <div class="projects-showcase-card">
+                      <img src="${
+                      project.image
+                  }" alt="${
+                      project.title
+                  }" class="projects-showcase-card-image">
+                      <div class="projects-showcase-card-overlay"></div>
+                      <div class="projects-showcase-card-content">
+                          <div class="projects-showcase-card-info">
+                              <h3>${
+                      project.title
+                  }</h3>
+                          
+                              
+                          </div>
+                          <a href="./service/" class="projects-showcase-card-arrow">
+                              <svg fill="none" viewBox="0 0 24 24">
+                                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                          </a>
+                      </div>
+                  </div>
+              `;
+              }
+
+              function projectsShowcaseRenderSlides() {
+                  const currentProjects = projectsShowcaseData[projectsShowcaseCurrentTab];
+                  projectsShowcaseItemsPerSlide = projectsShowcaseGetItemsPerSlide();
+
+                  const totalSlides = Math.ceil(currentProjects.length / projectsShowcaseItemsPerSlide);
+                  let slidesHTML = '';
+
+                  for (let i = 0; i < totalSlides; i++) {
+                      const startIndex = i * projectsShowcaseItemsPerSlide;
+                      const endIndex = Math.min(startIndex + projectsShowcaseItemsPerSlide, currentProjects.length);
+                      const slideProjects = currentProjects.slice(startIndex, endIndex);
+
+                      slidesHTML += `
+                      <div class="projects-showcase-slider-slide">
+                          ${
+                          slideProjects.map(project => projectsShowcaseCreateCard(project)).join('')
+                      }
+                      </div>
+                  `;
+                  }
+
+                  projectsShowcaseSliderTrack.innerHTML = slidesHTML;
+                  projectsShowcaseRenderDots(totalSlides);
+              }
+
+              function projectsShowcaseRenderDots(totalSlides) {
+                  let dotsHTML = '';
+                  for (let i = 0; i < totalSlides; i++) {
+                      const activeClass = i === projectsShowcaseCurrentSlideIndex ? 'projects-showcase-dot-active' : '';
+                      dotsHTML += `<button class="projects-showcase-dot ${activeClass}" data-slide="${i}" aria-label="Go to slide ${
+                          i + 1
+                      }"></button>`;
+                  }
+                  projectsShowcaseDotsContainer.innerHTML = dotsHTML;
+
+                  // Add event listeners to dots
+                  const dots = document.querySelectorAll('.projects-showcase-dot');
+                  dots.forEach(dot => {
+                      dot.addEventListener('click', function () {
+                          const slideIndex = parseInt(this.getAttribute('data-slide'));
+                          projectsShowcaseGoToSlide(slideIndex);
+                      });
+                  });
+              }
+
+              function projectsShowcaseGoToSlide(slideIndex) {
+                  const currentProjects = projectsShowcaseData[projectsShowcaseCurrentTab];
+                  const totalSlides = Math.ceil(currentProjects.length / projectsShowcaseItemsPerSlide);
+
+                  projectsShowcaseCurrentSlideIndex = slideIndex;
+                  const translateValue = - slideIndex * 100;
+                  projectsShowcaseSliderTrack.style.transform = `translateX(${translateValue}%)`;
+
+                  // Update dots
+                  const dots = document.querySelectorAll('.projects-showcase-dot');
+                  dots.forEach((dot, index) => {
+                      if (index === slideIndex) {
+                          dot.classList.add('projects-showcase-dot-active');
+                      } else {
+                          dot.classList.remove('projects-showcase-dot-active');
+                      }
+                  });
+              }
+
+              function projectsShowcaseNextSlide() {
+                  const currentProjects = projectsShowcaseData[projectsShowcaseCurrentTab];
+                  const totalSlides = Math.ceil(currentProjects.length / projectsShowcaseItemsPerSlide);
+                  const nextIndex = (projectsShowcaseCurrentSlideIndex + 1) % totalSlides;
+                  projectsShowcaseGoToSlide(nextIndex);
+              }
+
+              function projectsShowcasePrevSlide() {
+                  const currentProjects = projectsShowcaseData[projectsShowcaseCurrentTab];
+                  const totalSlides = Math.ceil(currentProjects.length / projectsShowcaseItemsPerSlide);
+                  const prevIndex = (projectsShowcaseCurrentSlideIndex - 1 + totalSlides) % totalSlides;
+                  projectsShowcaseGoToSlide(prevIndex);
+              }
+
+              function projectsShowcaseSwitchTab(tabName) {
+                  projectsShowcaseCurrentTab = tabName;
+                  projectsShowcaseCurrentSlideIndex = 0;
+
+                  // Update tab buttons
+                  projectsShowcaseTabButtons.forEach(btn => {
+                      if (btn.getAttribute('data-tab') === tabName) {
+                          btn.classList.add('projects-showcase-active');
+                      } else {
+                          btn.classList.remove('projects-showcase-active');
+                      }
+                  });
+
+                  // Re-render slides
+                  projectsShowcaseRenderSlides();
+                  projectsShowcaseGoToSlide(0);
+              }
+
+              // Event Listeners
+              function projectsShowcaseInitEventListeners() { // Tab buttons
+                  projectsShowcaseTabButtons.forEach(btn => {
+                      btn.addEventListener('click', function () {
+                          const tabName = this.getAttribute('data-tab');
+                          projectsShowcaseSwitchTab(tabName);
+                      });
+                  });
+
+                  // Navigation arrows
+                  projectsShowcasePrevButton.addEventListener('click', projectsShowcasePrevSlide);
+                  projectsShowcaseNextButton.addEventListener('click', projectsShowcaseNextSlide);
+
+                  // Window resize
+                  let projectsShowcaseResizeTimer;
+                  window.addEventListener('resize', function () {
+                      clearTimeout(projectsShowcaseResizeTimer);
+                      projectsShowcaseResizeTimer = setTimeout(function () {
+                          const newItemsPerSlide = projectsShowcaseGetItemsPerSlide();
+                          if (newItemsPerSlide !== projectsShowcaseItemsPerSlide) {
+                              projectsShowcaseCurrentSlideIndex = 0;
+                              projectsShowcaseRenderSlides();
+                              projectsShowcaseGoToSlide(0);
+                          }
+                      }, 250);
+                  });
+
+                  // Keyboard navigation
+                  document.addEventListener('keydown', function (e) {
+                      if (e.key === 'ArrowLeft') {
+                          projectsShowcasePrevSlide();
+                      } else if (e.key === 'ArrowRight') {
+                          projectsShowcaseNextSlide();
+                      }
+                  });
+              }
+
+              // Initialize
+              function projectsShowcaseInit() {
+                  projectsShowcaseRenderSlides();
+                  projectsShowcaseInitEventListeners();
+              }
+
+              // Public API
+              return {init: projectsShowcaseInit};
+          })();
+
+          // Initialize when DOM is ready
+          if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', ProjectsShowcaseManager.init);
+          } else {
+              ProjectsShowcaseManager.init();
+          }
+      </script>
 
     <script>
       // Custom Swiper Function with Dots

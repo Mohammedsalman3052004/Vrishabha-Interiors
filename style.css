@@ -5624,6 +5624,7 @@ body.mfp-zoom-out-cur {
     font-size: 17px;
     transition: border-color 300ms ease, transform 300ms ease, background-color 300ms ease, color 300ms ease;
     transform-style: preserve-3d;
+    text-decoration: none;
 }
 
 [data-overlay-dark] .button-4 span,
